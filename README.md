@@ -7,4 +7,4 @@
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+[Grabación de pantalla 2025-06-25 a la(s) 9.10.41 p. m.webm](https://github.com/user-attachments/assets/1e5b8dfb-3056-4aa3-859c-8267f17d1c3c)
