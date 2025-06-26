@@ -1,3 +1,16 @@
+## Author
+
+[@restoker](https://www.github.com/restoker)
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm i
+  npm run dev
+```
+
 ## 🧞 Commands
 
 | Command                   | Action                                           |
