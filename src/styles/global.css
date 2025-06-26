@@ -1,0 +1,219 @@
+@import "tailwindcss";
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Primary';
+    src: url('/fonts/fragment.woff2') format('woff2'), url('/fonts/fragment.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --primary: #efefef;
+    --secondary: #101010;
+}
+
+html {
+    font-size: calc(100vw / 1920 * 10);
+}
+
+body {
+    font-family: 'Primary';
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+h1 {
+    font-size: 4.8rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+span {
+    font-size: 3.2rem;
+}
+
+/*?---------> Lenis CSS Settings */
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+/* Section */
+.scroll {
+    position: relative;
+    width: 100%;
+    height: 400vh;
+    /* 400% of the viewport height to allow enough space for scroll-triggered animations */
+}
+
+.scroll_wrapper {
+    position: sticky;
+    /* Sticky wrapper for keeping content in view during scrolling */
+    top: 0;
+}
+
+.scroll_text {
+    position: relative;
+    /* display: flex; */
+    /* flex-flow: column wrap; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* padding-top: 24rem; */
+    /* height: 100vh; */
+}
+
+.scroll_text_subtitle {
+    text-align: center;
+    margin-bottom: 3.2rem;
+}
+
+.scroll_text_title {
+    display: inline-flex;
+    justify-content: center;
+    gap: 6.4rem;
+}
+
+.scroll_text_title_word {
+    display: inline-flex;
+    perspective: 800px;
+    /* Adds a 3D perspective to the container, giving depth to child elements (useful for 3D transforms like rotateY) */
+}
+
+.scroll_text_title_word span {
+    display: block;
+    font-size: 12rem;
+    text-transform: uppercase;
+}
+
+.scroll_gallery {
+    position: absolute;
+    /*! Note: This element won't scroll naturally because the scrolling and movement will be handled by GSAP animations in JavaScript */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 6.4rem;
+}
+
+.scroll_gallery_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+}
+
+.scroll_gallery_row:nth-child(1) {
+    display: flex;
+    justify-content: center;
+}
+
+.scroll_gallery_row:nth-child(2),
+.scroll_gallery_row:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.scroll_gallery_row:nth-child(3) {
+    padding-top: 32rem;
+}
+
+.scroll_gallery_row_image {
+    object-fit: cover;
+    border-radius: 4rem;
+}
+
+.scroll_gallery_row:nth-child(1) .scroll_gallery_row_image:nth-child(1) {
+    width: 56rem;
+    height: 56rem;
+}
+
+.scroll_gallery_row:nth-child(2) .scroll_gallery_row_image:nth-child(1) {
+    width: 40rem;
+    height: 24rem;
+}
+
+.scroll_gallery_row:nth-child(2) .scroll_gallery_row_image:nth-child(2) {
+    width: 40rem;
+    height: 32rem;
+}
+
+.scroll_gallery_row:nth-child(3) .scroll_gallery_row_image:nth-child(1) {
+    width: 40rem;
+    height: 32rem;
+}
+
+.scroll_gallery_row:nth-child(3) .scroll_gallery_row_image:nth-child(2) {
+    width: 40rem;
+    height: 40rem;
+}
+
+@media screen and (max-width: 769px) {
+    html {
+        font-size: calc(100vw / 769 * 10);
+    }
+
+    .scroll_text span {
+        font-size: 6.4rem;
+    }
+
+    .scroll_gallery_container {
+        gap: 24rem;
+    }
+
+    .scroll_gallery_row:nth-child(3) {
+        padding-top: 64rem;
+    }
+
+    .scroll_gallery_row:nth-child(1) .scroll_gallery_row_image:nth-child(1) {
+        width: 32rem;
+        height: 32rem;
+    }
+
+    .scroll_gallery_row:nth-child(2) .scroll_gallery_row_image:nth-child(1) {
+        width: 20rem;
+        height: 16rem;
+    }
+
+    .scroll_gallery_row:nth-child(2) .scroll_gallery_row_image:nth-child(2) {
+        width: 16rem;
+        height: 24rem;
+    }
+
+    .scroll_gallery_row:nth-child(3) .scroll_gallery_row_image:nth-child(1) {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .scroll_gallery_row:nth-child(3) .scroll_gallery_row_image:nth-child(2) {
+        width: 18rem;
+        height: 24rem;
+    }
+}
